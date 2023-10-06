@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SwapiMVC.Controllers
 {
-    public class PeopleController
+    public class PeopleController : Controller
     {
         private readonly HttpClient _httpClient;
         public PeopleController(IHttpClientFactory httpClientFactory)
