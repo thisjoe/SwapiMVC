@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace SwapiMVC.Models
@@ -16,7 +17,8 @@ namespace SwapiMVC.Models
         [JsonPropertyName("results")]
         public IEnumerable<TResult>? Results { get; set; }
 
-        public string NextPageNum => Next?.Split("?page").LastOrDefault();
-        public string PreviousPageNum => Previous?.Split("?page").LastOrDefault();
+        public string? NextPageNum => Next?.Split("?page").LastOrDefault();
+        public string? PreviousPageNum => Previous?.Split("?page").LastOrDefault();
+
     }
 }

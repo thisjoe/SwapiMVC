@@ -23,6 +23,11 @@ namespace SwapiMVC.Models
         {
             get
             {
+                if(Url == null)
+                {
+                    return "Not available";
+                }
+
                 return Url
                     .Split("/", StringSplitOptions.RemoveEmptyEntries)
                     .LastOrDefault();
